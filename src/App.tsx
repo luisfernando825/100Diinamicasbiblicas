@@ -337,7 +337,7 @@ export default function App() {
                   <h3 className="text-base sm:text-lg font-bold text-white mb-3 leading-snug">{bonus.title}</h3>
                   <div className="flex flex-col items-center justify-center gap-1 mt-auto">
                     <span className="text-sm text-slate-400 line-through decoration-red-500/50">De R$ {bonus.oldPrice}</span>
-                    <span className="text-emerald-400 font-black text-xl uppercase tracking-wide">Por Grátis</span>
+                    <span className="text-[#22C55E] font-black text-xl uppercase tracking-wide">Por Grátis</span>
                   </div>
                 </div>
               </div>
@@ -451,30 +451,30 @@ export default function App() {
             </div>
 
             {/* Plano Completo */}
-            <div className="bg-gradient-to-b from-indigo-900 via-purple-900 to-slate-900 p-8 rounded-[20px] border border-purple-500/30 shadow-2xl shadow-brand-purple/40 flex flex-col h-full relative transform md:-translate-y-4 hover:scale-105 transition-all duration-300 z-10">
+            <div className="bg-white p-8 rounded-[20px] border-2 border-brand-purple shadow-2xl shadow-brand-purple/20 flex flex-col h-full relative transform md:-translate-y-4 hover:scale-105 transition-all duration-300 z-10">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950 px-5 py-1.5 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-widest shadow-lg whitespace-nowrap flex items-center gap-1.5 border border-amber-300">
                 ⭐ MAIS POPULAR ENTRE LÍDERES
               </div>
               
               <div className="text-center mb-8 mt-4">
-                <h3 className="text-xl font-bold text-purple-200 mb-4">Plano Completo</h3>
-                <div className="text-xs font-bold text-purple-300 uppercase tracking-[0.2em] mb-2">HOJE POR APENAS</div>
-                <div className="flex items-center justify-center text-6xl font-black text-white drop-shadow-lg">
-                  <span className="text-2xl font-medium text-purple-300 mr-1.5 -mt-6">R$</span>27,90
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Plano Completo</h3>
+                <div className="text-xs font-bold text-brand-purple uppercase tracking-[0.2em] mb-2">HOJE POR APENAS</div>
+                <div className="flex items-center justify-center text-6xl font-black text-slate-900 drop-shadow-sm">
+                  <span className="text-2xl font-medium text-slate-500 mr-1.5 -mt-6">R$</span>27,90
                 </div>
               </div>
               
               <ul className="space-y-4 mb-8 flex-1">
                 {[
                   "100 dinâmicas bíblicas",
-                  <span key="bonus" className="font-bold text-white">Todos os bônus</span>,
+                  <span key="bonus" className="font-bold text-slate-900">Todos os bônus</span>,
                   "Atualizações futuras",
                   "Material extra",
                   "Suporte prioritário via WhatsApp"
                 ].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-purple-100 font-medium text-sm md:text-base">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <li key={i} className="flex items-center gap-3 text-slate-700 font-medium text-sm md:text-base">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                     </div>
                     <span>{feature}</span>
                   </li>
@@ -564,10 +564,10 @@ export default function App() {
       {/* UPSELL MODAL */}
       {isUpsellModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-          <div className="bg-gradient-to-b from-[#1f0f4a] to-[#5b2cff] rounded-[20px] shadow-2xl shadow-[#5b2cff]/40 w-full max-w-md p-6 relative animate-in fade-in zoom-in duration-300 border border-[#5b2cff]/30 flex flex-col">
+          <div className="bg-white rounded-[20px] shadow-2xl shadow-brand-purple/20 w-full max-w-md p-6 relative animate-in fade-in zoom-in duration-300 border-2 border-brand-purple flex flex-col">
             <button 
               onClick={() => setIsUpsellModalOpen(false)}
-              className="absolute top-4 right-4 p-1.5 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-colors z-20"
+              className="absolute top-4 right-4 p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-20"
             >
               <X className="w-5 h-5" />
             </button>
@@ -577,13 +577,13 @@ export default function App() {
             </div>
             
             <div className="text-center mb-5 mt-4">
-              <p className="text-amber-300 font-bold text-sm md:text-base mb-2 animate-pulse">
+              <p className="text-amber-600 font-bold text-sm md:text-base mb-2 animate-pulse">
                 ⏳ Espere! Antes de sair veja essa oferta exclusiva
               </p>
-              <h3 className="text-xl font-bold text-white mb-2 drop-shadow-md">Plano Completo</h3>
-              <div className="text-[10px] font-bold text-purple-200 uppercase tracking-[0.2em] mb-1">HOJE POR APENAS</div>
-              <div className="flex items-center justify-center text-5xl font-black text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                <span className="text-xl font-medium text-purple-200 mr-1.5 -mt-4">R$</span>19,90
+              <h3 className="text-xl font-bold text-slate-900 mb-2 drop-shadow-sm">Plano Completo</h3>
+              <div className="text-[10px] font-bold text-brand-purple uppercase tracking-[0.2em] mb-1">HOJE POR APENAS</div>
+              <div className="flex items-center justify-center text-5xl font-black text-slate-900 drop-shadow-sm">
+                <span className="text-xl font-medium text-slate-500 mr-1.5 -mt-4">R$</span>19,90
               </div>
             </div>
 
@@ -595,9 +595,9 @@ export default function App() {
                 "Material extra para líderes",
                 "Suporte prioritário via WhatsApp"
               ].map((feature, i) => (
-                <li key={i} className="flex items-center gap-3 text-white font-medium text-sm">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30 shadow-[0_0_10px_rgba(16,185,129,0.2)]">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                <li key={i} className="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                   </div>
                   <span>{feature}</span>
                 </li>
@@ -613,7 +613,7 @@ export default function App() {
               </a>
               <a 
                 href="https://pay.lowify.com.br/checkout?product_id=DxOIFT"
-                className="w-full py-1.5 px-4 text-white/60 hover:text-white font-medium text-xs transition-colors underline decoration-white/30 hover:decoration-white underline-offset-4 block text-center"
+                className="w-full py-1.5 px-4 text-slate-500 hover:text-slate-700 font-medium text-xs transition-colors underline decoration-slate-300 hover:decoration-slate-500 underline-offset-4 block text-center"
               >
                 Não, obrigado. Quero apenas o plano simples.
               </a>
